@@ -1,0 +1,11 @@
+node_modules
+.vscode
+.idea
+dist
+/public
+.eslintrc.js
+commitlint.config.js
+.prettierrc.js
+
+auto-imports.d.ts
+components.d.ts

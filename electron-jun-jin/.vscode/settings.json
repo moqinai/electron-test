@@ -1,0 +1,31 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.snippetSuggestions": "top",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true, // !!!
+    "strings": true // !!!
+  },
+  "fileheader.customMade": {
+    "Description": "功能：",
+    "Date": "Do not edit", // 文件创建时间(不变)
+    "LastEditTime": "lastTime"
+  }, // 头部注释
+  "fileheader.cursorMode": {
+    "description": "",
+    "param": "",
+    "return": ""
+  }, // 光标处注释
+  "fileheader.configObj": {
+    "autoAdd": true, // 默认开启,
+    "autoAlready": true,
+    "author": "fengyinchao@zonst.cn"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

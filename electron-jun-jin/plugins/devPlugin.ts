@@ -1,7 +1,7 @@
 /*
  * @Author: lipengcheng
  * @Date: 2023-10-16 15:17:22
- * @LastEditTime: 2023-10-16 17:53:16
+ * @LastEditTime: 2023-10-17 14:35:57
  * @Description: 
  */
 //plugins\devPlugin.ts
@@ -27,6 +27,7 @@ export let devPlugin = () => {
         let httpAddress = `http://${addressInfo?.address}:${addressInfo?.port}`;
         let electronProcess = spawn(require("electron").toString(), ["./dist/mainEntry.js", httpAddress], {
           // 通过 Node.js child_process 模块的 spawn 方法启动 electron 子进程的
+          // 可以使用spawn方法第三个参数的env属性附加环境变量
           cwd: process.cwd(), // cwd 属性用于设置当前的工作目录，process.cwd() 返回的值就是当前项目的根目录
           stdio: "inherit", // stdio 用于设置 electron 进程的控制台输出，这里设置 inherit 可以让 electron 子进程的控制台输出数据同步到主进程的控制台。
         });

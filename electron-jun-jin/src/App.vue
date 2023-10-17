@@ -1,32 +1,32 @@
 <!--
  * @Author: lipengcheng
  * @Date: 2023-10-16 14:41:52
- * @LastEditTime: 2023-10-16 17:53:56
+ * @LastEditTime: 2023-10-17 16:09:49
 -->
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
+    <!--  <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    </a> -->
   </div>
   <HelloWorld msg="Vite + Vue" />123
 </template>
 
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
 
-import fs from 'fs'
-import { ipcRenderer } from 'electron'
-import { onMounted } from 'vue'
+import fs from 'fs';
+import { ipcRenderer } from 'electron';
+import { onMounted } from 'vue';
 
 onMounted(() => {
-  console.log(fs.writeFileSync)
-  console.log(ipcRenderer)
-})
+  console.log(fs.writeFileSync);
+  console.log(ipcRenderer);
+});
 </script>
 <style scoped>
 .logo {

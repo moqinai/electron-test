@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "obkoro1.korofileheader",
+    "esbenp.prettier-vscode",
+    "alefragnani.project-manager",
+    "jingwang37.element-plus-snippets",
+    "gruntfuggly.todo-tree",
+    "dionmunk.vscode-notes",
+    "tinkertrain.theme-panda"
+  ]
+}

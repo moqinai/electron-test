@@ -1,11 +1,13 @@
 /*
  * @Author: lipengcheng
  * @Date: 2023-10-16 15:09:56
- * @LastEditTime: 2023-10-16 17:36:47
+ * @LastEditTime: 2023-10-17 14:34:44
  * @Description: 
  */
 //src\main\mainEntry.ts
 import { app, BrowserWindow } from "electron"
+import { CustomScheme } from './CustomScheme'
+
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = "true" // 用于设置渲染进程开发者调试工具的警告，这里设置为 true 就不会再显示任何警告了。
 
 let mainWindow: BrowserWindow;
@@ -27,5 +29,14 @@ app.whenReady().then(() => {
   };
   mainWindow = new BrowserWindow(config)
   mainWindow.webContents.openDevTools({ mode: "undocked" }) // 用于打开开发者调试工具
-  mainWindow.loadURL(process.argv[2]);
+
+  // 这样当存在指定的命令行参数时，我们就认为是开发环境，使用命令行参数加载页面，
+  // 当不存在命令行参数时，我们就认为是生产环境，通过app:// scheme 加载页面。
+  if (process.argv[2]) {
+    mainWindow.loadURL(process.argv[2]);
+  } else {
+    CustomScheme.registerScheme();
+    mainWindow.loadURL(`app://index.html`);
+  }
+  // mainWindow.loadURL(process.argv[2]);
 });
